@@ -70,12 +70,5 @@ with open('ctrip_travel.csv', 'w', newline='') as csvfile:
             rating = ""
             review = ""
             rating_reviewList = product.select("ul.r_comment")
-            if len(rating_reviewList) > 0:
-                rating_review = rating_reviewList[0]
-                rating = rating_review.select("a.score > strong")[0].text
-                if len(rating_review.select("a.recomment")) > 0:
-                    review = rating_review.select("a.recomment")[0].text.strip()
-            print(rating)
-            print(review)
 
             spamwriter.writerow([cityName[i], name, price, rating, review, url])
