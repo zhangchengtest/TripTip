@@ -1,7 +1,6 @@
 import os
 import sys
 import bs4
-import translate_test
 from bs4 import BeautifulSoup as bs
 import urllib, urllib.request, csv
 
